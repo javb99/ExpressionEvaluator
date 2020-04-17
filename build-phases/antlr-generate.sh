@@ -5,6 +5,8 @@
 #
 #  Usage: antlr-generate.sh <input grammar file> <output dir>
 #
+#  This is run automatically as part of the build process.
+#
 #  Created by Joseph Van Boxtel on 4/14/20.
 #  Copyright © 2020 Joseph Van Boxtel. All rights reserved.
 
