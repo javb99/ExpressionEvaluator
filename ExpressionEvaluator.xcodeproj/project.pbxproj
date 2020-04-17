@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		5C6A1FF624492962001D6DE4 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6A1FF524492962001D6DE4 /* main.swift */; };
-		5C6A2009244929FC001D6DE4 /* Antlr4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C6A2005244929F0001D6DE4 /* Antlr4.framework */; };
-		5C6A200A244929FC001D6DE4 /* Antlr4.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5C6A2005244929F0001D6DE4 /* Antlr4.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5C6A201324492B60001D6DE4 /* Evaluator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6A201224492B60001D6DE4 /* Evaluator.swift */; };
 		5C6A202224492C24001D6DE4 /* ExpressionLexer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6A201624492C24001D6DE4 /* ExpressionLexer.swift */; };
 		5C6A202524492C24001D6DE4 /* ExpressionBaseVisitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6A201B24492C24001D6DE4 /* ExpressionBaseVisitor.swift */; };
@@ -18,23 +16,6 @@
 		5C6A202824492C24001D6DE4 /* ExpressionParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6A201E24492C24001D6DE4 /* ExpressionParser.swift */; };
 		5C6A202924492C24001D6DE4 /* ExpressionVisitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6A202124492C24001D6DE4 /* ExpressionVisitor.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		5C6A2004244929F0001D6DE4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5C6A1FFD244929EF001D6DE4 /* Antlr4.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = "Antlr4::Antlr4::Product";
-			remoteInfo = Antlr4;
-		};
-		5C6A2006244929F0001D6DE4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5C6A1FFD244929EF001D6DE4 /* Antlr4.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = "Antlr4::Antlr4Tests::Product";
-			remoteInfo = Antlr4Tests;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		5C6A1FF024492962001D6DE4 /* CopyFiles */ = {
@@ -52,7 +33,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				5C6A200A244929FC001D6DE4 /* Antlr4.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -63,7 +43,7 @@
 		5C6A1FF224492962001D6DE4 /* ExpressionEvaluator */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ExpressionEvaluator; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C6A1FF524492962001D6DE4 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		5C6A1FFC244929A2001D6DE4 /* build-phases */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "build-phases"; sourceTree = "<group>"; };
-		5C6A1FFD244929EF001D6DE4 /* Antlr4.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Antlr4.xcodeproj; path = ../antlr4SwiftRuntime/Antlr4.xcodeproj; sourceTree = "<group>"; };
+		5C6A1FFD244929EF001D6DE4 /* antlr4SwiftRuntime */ = {isa = PBXFileReference; lastKnownFileType = folder; path = antlr4SwiftRuntime; sourceTree = "<group>"; };
 		5C6A200C24492A3B001D6DE4 /* Expression.g4 */ = {isa = PBXFileReference; lastKnownFileType = text; path = Expression.g4; sourceTree = "<group>"; };
 		5C6A201224492B60001D6DE4 /* Evaluator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Evaluator.swift; sourceTree = "<group>"; };
 		5C6A201624492C24001D6DE4 /* ExpressionLexer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressionLexer.swift; sourceTree = "<group>"; };
@@ -83,7 +63,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C6A2009244929FC001D6DE4 /* Antlr4.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,7 +72,7 @@
 		5C6A1FE924492962001D6DE4 = {
 			isa = PBXGroup;
 			children = (
-				5C6A1FFD244929EF001D6DE4 /* Antlr4.xcodeproj */,
+				5C6A1FFD244929EF001D6DE4 /* antlr4SwiftRuntime */,
 				5C6A201524492C24001D6DE4 /* AutoGen */,
 				5C6A1FFC244929A2001D6DE4 /* build-phases */,
 				5C6A200C24492A3B001D6DE4 /* Expression.g4 */,
@@ -118,15 +97,6 @@
 				5C6A201224492B60001D6DE4 /* Evaluator.swift */,
 			);
 			path = ExpressionEvaluator;
-			sourceTree = "<group>";
-		};
-		5C6A1FFE244929EF001D6DE4 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				5C6A2005244929F0001D6DE4 /* Antlr4.framework */,
-				5C6A2007244929F0001D6DE4 /* Antlr4Tests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		5C6A2008244929FC001D6DE4 /* Frameworks */ = {
@@ -201,35 +171,12 @@
 			mainGroup = 5C6A1FE924492962001D6DE4;
 			productRefGroup = 5C6A1FF324492962001D6DE4 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 5C6A1FFE244929EF001D6DE4 /* Products */;
-					ProjectRef = 5C6A1FFD244929EF001D6DE4 /* Antlr4.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				5C6A1FF124492962001D6DE4 /* ExpressionEvaluator */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		5C6A2005244929F0001D6DE4 /* Antlr4.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Antlr4.framework;
-			remoteRef = 5C6A2004244929F0001D6DE4 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		5C6A2007244929F0001D6DE4 /* Antlr4Tests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = file;
-			path = Antlr4Tests.xctest;
-			remoteRef = 5C6A2006244929F0001D6DE4 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXShellScriptBuildPhase section */
 		5C6A201124492A66001D6DE4 /* Generate ANTLER Parser */ = {
