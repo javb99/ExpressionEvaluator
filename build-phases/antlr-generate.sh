@@ -34,5 +34,5 @@ then
 fi
 
 echo "Generating ANLTR Parser using $GRAMMAR"
-java -Xmx500M -cp "$ANTLER_LOCATION:$CLASSPATH" org.antlr.v4.Tool -visitor -Dlanguage=Swift -message-format gnu -o $OUTPUT_DIR $GRAMMAR
+java -Xmx500M -cp "$ANTLER_LOCATION:$CLASSPATH" org.antlr.v4.Tool -visitor -no-listener -Dlanguage=Swift -message-format gnu -o $OUTPUT_DIR $GRAMMAR
 echo "Finished Generating ANLTR Parser at $OUTPUT_DIR"

@@ -12,8 +12,6 @@
 		5C6A200A244929FC001D6DE4 /* Antlr4.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5C6A2005244929F0001D6DE4 /* Antlr4.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5C6A201324492B60001D6DE4 /* Evaluator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6A201224492B60001D6DE4 /* Evaluator.swift */; };
 		5C6A202224492C24001D6DE4 /* ExpressionLexer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6A201624492C24001D6DE4 /* ExpressionLexer.swift */; };
-		5C6A202324492C24001D6DE4 /* ExpressionListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6A201724492C24001D6DE4 /* ExpressionListener.swift */; };
-		5C6A202424492C24001D6DE4 /* ExpressionBaseListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6A201A24492C24001D6DE4 /* ExpressionBaseListener.swift */; };
 		5C6A202524492C24001D6DE4 /* ExpressionBaseVisitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6A201B24492C24001D6DE4 /* ExpressionBaseVisitor.swift */; };
 		5C6A202624492C24001D6DE4 /* ExpressionParserATN.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6A201C24492C24001D6DE4 /* ExpressionParserATN.swift */; };
 		5C6A202724492C24001D6DE4 /* ExpressionLexerATN.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6A201D24492C24001D6DE4 /* ExpressionLexerATN.swift */; };
@@ -69,10 +67,8 @@
 		5C6A200C24492A3B001D6DE4 /* Expression.g4 */ = {isa = PBXFileReference; lastKnownFileType = text; path = Expression.g4; sourceTree = "<group>"; };
 		5C6A201224492B60001D6DE4 /* Evaluator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Evaluator.swift; sourceTree = "<group>"; };
 		5C6A201624492C24001D6DE4 /* ExpressionLexer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressionLexer.swift; sourceTree = "<group>"; };
-		5C6A201724492C24001D6DE4 /* ExpressionListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressionListener.swift; sourceTree = "<group>"; };
 		5C6A201824492C24001D6DE4 /* Expression.interp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Expression.interp; sourceTree = "<group>"; };
 		5C6A201924492C24001D6DE4 /* ExpressionLexer.tokens */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ExpressionLexer.tokens; sourceTree = "<group>"; };
-		5C6A201A24492C24001D6DE4 /* ExpressionBaseListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressionBaseListener.swift; sourceTree = "<group>"; };
 		5C6A201B24492C24001D6DE4 /* ExpressionBaseVisitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressionBaseVisitor.swift; sourceTree = "<group>"; };
 		5C6A201C24492C24001D6DE4 /* ExpressionParserATN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressionParserATN.swift; sourceTree = "<group>"; };
 		5C6A201D24492C24001D6DE4 /* ExpressionLexerATN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressionLexerATN.swift; sourceTree = "<group>"; };
@@ -144,10 +140,8 @@
 			isa = PBXGroup;
 			children = (
 				5C6A201624492C24001D6DE4 /* ExpressionLexer.swift */,
-				5C6A201724492C24001D6DE4 /* ExpressionListener.swift */,
 				5C6A201824492C24001D6DE4 /* Expression.interp */,
 				5C6A201924492C24001D6DE4 /* ExpressionLexer.tokens */,
-				5C6A201A24492C24001D6DE4 /* ExpressionBaseListener.swift */,
 				5C6A201B24492C24001D6DE4 /* ExpressionBaseVisitor.swift */,
 				5C6A201C24492C24001D6DE4 /* ExpressionParserATN.swift */,
 				5C6A201D24492C24001D6DE4 /* ExpressionLexerATN.swift */,
@@ -269,10 +263,8 @@
 				5C6A202624492C24001D6DE4 /* ExpressionParserATN.swift in Sources */,
 				5C6A202824492C24001D6DE4 /* ExpressionParser.swift in Sources */,
 				5C6A1FF624492962001D6DE4 /* main.swift in Sources */,
-				5C6A202324492C24001D6DE4 /* ExpressionListener.swift in Sources */,
 				5C6A202224492C24001D6DE4 /* ExpressionLexer.swift in Sources */,
 				5C6A202524492C24001D6DE4 /* ExpressionBaseVisitor.swift in Sources */,
-				5C6A202424492C24001D6DE4 /* ExpressionBaseListener.swift in Sources */,
 				5C6A202724492C24001D6DE4 /* ExpressionLexerATN.swift in Sources */,
 				5C6A201324492B60001D6DE4 /* Evaluator.swift in Sources */,
 			);
