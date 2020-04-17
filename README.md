@@ -1,7 +1,7 @@
 
 # Run the Evaluator
 To run the project:
-- open the Xcode project in the `ExpressionEvaluator.xcodeproj`. 
+- open the Xcode project `ExpressionEvaluator.xcodeproj`. 
 - Press the run button (CMD+SHIFT+R)
 - Enter input in the [Xcode] console.
 
@@ -26,11 +26,8 @@ I've added the following as notes for myself or to reproduce my setup if there i
 
 ```sh
 ANTLER_JAR=/usr/local/lib/antlr-4.8-complete.jar
-
 export CLASSPATH=".:$ANTLER_JAR:$CLASSPATH"
-
 alias antlr4='java -Xmx500M -cp "$ANTLER_JAR:$CLASSPATH" org.antlr.v4.Tool'
-
 alias grun='java -Xmx500M -cp "$ANTLER_JAR:$CLASSPATH" org.antlr.v4.gui.TestRig'
 ```
 ## Install Maven
