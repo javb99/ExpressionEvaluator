@@ -8,7 +8,35 @@
 
 /* Begin PBXBuildFile section */
 		5C6A1FF624492962001D6DE4 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6A1FF524492962001D6DE4 /* main.swift */; };
+		5C6A2009244929FC001D6DE4 /* Antlr4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C6A2005244929F0001D6DE4 /* Antlr4.framework */; };
+		5C6A200A244929FC001D6DE4 /* Antlr4.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5C6A2005244929F0001D6DE4 /* Antlr4.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5C6A201324492B60001D6DE4 /* Evaluator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6A201224492B60001D6DE4 /* Evaluator.swift */; };
+		5C6A202224492C24001D6DE4 /* ExpressionLexer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6A201624492C24001D6DE4 /* ExpressionLexer.swift */; };
+		5C6A202324492C24001D6DE4 /* ExpressionListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6A201724492C24001D6DE4 /* ExpressionListener.swift */; };
+		5C6A202424492C24001D6DE4 /* ExpressionBaseListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6A201A24492C24001D6DE4 /* ExpressionBaseListener.swift */; };
+		5C6A202524492C24001D6DE4 /* ExpressionBaseVisitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6A201B24492C24001D6DE4 /* ExpressionBaseVisitor.swift */; };
+		5C6A202624492C24001D6DE4 /* ExpressionParserATN.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6A201C24492C24001D6DE4 /* ExpressionParserATN.swift */; };
+		5C6A202724492C24001D6DE4 /* ExpressionLexerATN.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6A201D24492C24001D6DE4 /* ExpressionLexerATN.swift */; };
+		5C6A202824492C24001D6DE4 /* ExpressionParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6A201E24492C24001D6DE4 /* ExpressionParser.swift */; };
+		5C6A202924492C24001D6DE4 /* ExpressionVisitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6A202124492C24001D6DE4 /* ExpressionVisitor.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5C6A2004244929F0001D6DE4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5C6A1FFD244929EF001D6DE4 /* Antlr4.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = "Antlr4::Antlr4::Product";
+			remoteInfo = Antlr4;
+		};
+		5C6A2006244929F0001D6DE4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5C6A1FFD244929EF001D6DE4 /* Antlr4.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = "Antlr4::Antlr4Tests::Product";
+			remoteInfo = Antlr4Tests;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		5C6A1FF024492962001D6DE4 /* CopyFiles */ = {
@@ -20,12 +48,38 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		5C6A200B244929FC001D6DE4 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				5C6A200A244929FC001D6DE4 /* Antlr4.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		5C6A1FF224492962001D6DE4 /* ExpressionEvaluator */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ExpressionEvaluator; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C6A1FF524492962001D6DE4 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		5C6A1FFC244929A2001D6DE4 /* build-phases */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "build-phases"; sourceTree = "<group>"; };
+		5C6A1FFD244929EF001D6DE4 /* Antlr4.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Antlr4.xcodeproj; path = ../antlr4SwiftRuntime/Antlr4.xcodeproj; sourceTree = "<group>"; };
+		5C6A200C24492A3B001D6DE4 /* Expression.g4 */ = {isa = PBXFileReference; lastKnownFileType = text; path = Expression.g4; sourceTree = "<group>"; };
+		5C6A201224492B60001D6DE4 /* Evaluator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Evaluator.swift; sourceTree = "<group>"; };
+		5C6A201624492C24001D6DE4 /* ExpressionLexer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressionLexer.swift; sourceTree = "<group>"; };
+		5C6A201724492C24001D6DE4 /* ExpressionListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressionListener.swift; sourceTree = "<group>"; };
+		5C6A201824492C24001D6DE4 /* Expression.interp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Expression.interp; sourceTree = "<group>"; };
+		5C6A201924492C24001D6DE4 /* ExpressionLexer.tokens */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ExpressionLexer.tokens; sourceTree = "<group>"; };
+		5C6A201A24492C24001D6DE4 /* ExpressionBaseListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressionBaseListener.swift; sourceTree = "<group>"; };
+		5C6A201B24492C24001D6DE4 /* ExpressionBaseVisitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressionBaseVisitor.swift; sourceTree = "<group>"; };
+		5C6A201C24492C24001D6DE4 /* ExpressionParserATN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressionParserATN.swift; sourceTree = "<group>"; };
+		5C6A201D24492C24001D6DE4 /* ExpressionLexerATN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressionLexerATN.swift; sourceTree = "<group>"; };
+		5C6A201E24492C24001D6DE4 /* ExpressionParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressionParser.swift; sourceTree = "<group>"; };
+		5C6A201F24492C24001D6DE4 /* ExpressionLexer.interp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ExpressionLexer.interp; sourceTree = "<group>"; };
+		5C6A202024492C24001D6DE4 /* Expression.tokens */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Expression.tokens; sourceTree = "<group>"; };
+		5C6A202124492C24001D6DE4 /* ExpressionVisitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressionVisitor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C6A2009244929FC001D6DE4 /* Antlr4.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,8 +97,13 @@
 		5C6A1FE924492962001D6DE4 = {
 			isa = PBXGroup;
 			children = (
+				5C6A1FFD244929EF001D6DE4 /* Antlr4.xcodeproj */,
+				5C6A201524492C24001D6DE4 /* AutoGen */,
+				5C6A1FFC244929A2001D6DE4 /* build-phases */,
+				5C6A200C24492A3B001D6DE4 /* Expression.g4 */,
 				5C6A1FF424492962001D6DE4 /* ExpressionEvaluator */,
 				5C6A1FF324492962001D6DE4 /* Products */,
+				5C6A2008244929FC001D6DE4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,9 +119,44 @@
 			isa = PBXGroup;
 			children = (
 				5C6A1FF524492962001D6DE4 /* main.swift */,
-				5C6A1FFC244929A2001D6DE4 /* build-phases */,
+				5C6A201224492B60001D6DE4 /* Evaluator.swift */,
 			);
 			path = ExpressionEvaluator;
+			sourceTree = "<group>";
+		};
+		5C6A1FFE244929EF001D6DE4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5C6A2005244929F0001D6DE4 /* Antlr4.framework */,
+				5C6A2007244929F0001D6DE4 /* Antlr4Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5C6A2008244929FC001D6DE4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5C6A201524492C24001D6DE4 /* AutoGen */ = {
+			isa = PBXGroup;
+			children = (
+				5C6A201624492C24001D6DE4 /* ExpressionLexer.swift */,
+				5C6A201724492C24001D6DE4 /* ExpressionListener.swift */,
+				5C6A201824492C24001D6DE4 /* Expression.interp */,
+				5C6A201924492C24001D6DE4 /* ExpressionLexer.tokens */,
+				5C6A201A24492C24001D6DE4 /* ExpressionBaseListener.swift */,
+				5C6A201B24492C24001D6DE4 /* ExpressionBaseVisitor.swift */,
+				5C6A201C24492C24001D6DE4 /* ExpressionParserATN.swift */,
+				5C6A201D24492C24001D6DE4 /* ExpressionLexerATN.swift */,
+				5C6A201E24492C24001D6DE4 /* ExpressionParser.swift */,
+				5C6A201F24492C24001D6DE4 /* ExpressionLexer.interp */,
+				5C6A202024492C24001D6DE4 /* Expression.tokens */,
+				5C6A202124492C24001D6DE4 /* ExpressionVisitor.swift */,
+			);
+			path = AutoGen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +166,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5C6A1FF924492962001D6DE4 /* Build configuration list for PBXNativeTarget "ExpressionEvaluator" */;
 			buildPhases = (
+				5C6A201124492A66001D6DE4 /* Generate ANTLER Parser */,
 				5C6A1FEE24492962001D6DE4 /* Sources */,
 				5C6A1FEF24492962001D6DE4 /* Frameworks */,
 				5C6A1FF024492962001D6DE4 /* CopyFiles */,
+				5C6A200B244929FC001D6DE4 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -110,6 +207,12 @@
 			mainGroup = 5C6A1FE924492962001D6DE4;
 			productRefGroup = 5C6A1FF324492962001D6DE4 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 5C6A1FFE244929EF001D6DE4 /* Products */;
+					ProjectRef = 5C6A1FFD244929EF001D6DE4 /* Antlr4.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				5C6A1FF124492962001D6DE4 /* ExpressionEvaluator */,
@@ -117,12 +220,61 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		5C6A2005244929F0001D6DE4 /* Antlr4.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Antlr4.framework;
+			remoteRef = 5C6A2004244929F0001D6DE4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5C6A2007244929F0001D6DE4 /* Antlr4Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = file;
+			path = Antlr4Tests.xctest;
+			remoteRef = 5C6A2006244929F0001D6DE4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5C6A201124492A66001D6DE4 /* Generate ANTLER Parser */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Expression.g4",
+			);
+			name = "Generate ANTLER Parser";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(SRCROOT)/AutoGen",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${SOURCE_ROOT}/build-phases/antlr-generate.sh ${SCRIPT_INPUT_FILE_0} ${SCRIPT_OUTPUT_FILE_0}\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5C6A1FEE24492962001D6DE4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C6A202924492C24001D6DE4 /* ExpressionVisitor.swift in Sources */,
+				5C6A202624492C24001D6DE4 /* ExpressionParserATN.swift in Sources */,
+				5C6A202824492C24001D6DE4 /* ExpressionParser.swift in Sources */,
 				5C6A1FF624492962001D6DE4 /* main.swift in Sources */,
+				5C6A202324492C24001D6DE4 /* ExpressionListener.swift in Sources */,
+				5C6A202224492C24001D6DE4 /* ExpressionLexer.swift in Sources */,
+				5C6A202524492C24001D6DE4 /* ExpressionBaseVisitor.swift in Sources */,
+				5C6A202424492C24001D6DE4 /* ExpressionBaseListener.swift in Sources */,
+				5C6A202724492C24001D6DE4 /* ExpressionLexerATN.swift in Sources */,
+				5C6A201324492B60001D6DE4 /* Evaluator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

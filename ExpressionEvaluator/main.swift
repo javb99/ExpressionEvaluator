@@ -7,6 +7,20 @@
 //
 
 import Foundation
+import Antlr4
 
-print("Hello, World!")
+func readLine(prompt: String) -> String? {
+    print(prompt, terminator: "")
+    return readLine()
+}
+
+while let line = readLine(prompt: ">") {
+    let stream = ANTLRInputStream(line)
+    let lexer = ExpressionLexer(stream)
+    let tokens = CommonTokenStream(lexer)
+    let parser = try! ExpressionParser(tokens)
+    let tree = try! parser.s()
+
+    print("\(Evaluator().visit(tree)!)")
+}
 
