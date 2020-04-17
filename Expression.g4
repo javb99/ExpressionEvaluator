@@ -14,13 +14,13 @@ e : '(' e ')'   # Parens
   | e DIV e     # Div
   | e ADD e 	# Add
   | e SUB e     # Sub
-  | INT 		# Int
+  | FLOAT 		# Float
   ;
 
 ADD : '+';
 SUB : '-';
 MULT: '*';
 DIV : '/';
-INT : [0-9]+
-    | '-'[0-9]+;
+FLOAT : INT | INT '.' [0-9]+ ;
+INT : '-'? [0-9]+;
 WS : [ \t\n]+ -> skip ;

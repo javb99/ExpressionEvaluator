@@ -9,59 +9,58 @@
 import Foundation
 import Antlr4
 
-class Evaluator: ExpressionBaseVisitor<Int> {
-    override func visitS(_ ctx: ExpressionParser.SContext) -> Int {
+class Evaluator: ExpressionBaseVisitor<Double> {
+    override func visitS(_ ctx: ExpressionParser.SContext) -> Double {
         return visit(ctx.e()!) ?? 0
     }
-    override func visitAdd(_ ctx: ExpressionParser.AddContext) -> Int {
+    override func visitAdd(_ ctx: ExpressionParser.AddContext) -> Double {
         guard let leftTree = ctx.e(0), let left = visit(leftTree),
             let rightTree = ctx.e(1), let right = visit(rightTree) else {
             return 0
         }
         return left + right
     }
-    override func visitSub(_ ctx: ExpressionParser.SubContext) -> Int {
+    override func visitSub(_ ctx: ExpressionParser.SubContext) -> Double {
         guard let leftTree = ctx.e(0), let left = visit(leftTree),
             let rightTree = ctx.e(1), let right = visit(rightTree) else {
             return 0
         }
         return left - right
     }
-    override func visitMult(_ ctx: ExpressionParser.MultContext) -> Int {
+    override func visitMult(_ ctx: ExpressionParser.MultContext) -> Double {
         guard let leftTree = ctx.e(0), let left = visit(leftTree),
             let rightTree = ctx.e(1), let right = visit(rightTree) else {
             return 0
         }
         return left * right
     }
-    override func visitDiv(_ ctx: ExpressionParser.DivContext) -> Int {
+    override func visitDiv(_ ctx: ExpressionParser.DivContext) -> Double {
         guard let leftTree = ctx.e(0), let left = visit(leftTree),
             let rightTree = ctx.e(1), let right = visit(rightTree) else {
             return 0
         }
         return left / right
     }
-    override func visitExp(_ ctx: ExpressionParser.ExpContext) -> Int {
+    override func visitExp(_ ctx: ExpressionParser.ExpContext) -> Double {
         guard let leftTree = ctx.e(0), let left = visit(leftTree),
             let rightTree = ctx.e(1), let right = visit(rightTree) else {
             return 0
         }
-        /// Not actually accurate.
-        return Int(pow(Double(left), Double(right)))
+        return pow(left, right)
     }
-    override func visitAbs(_ ctx: ExpressionParser.AbsContext) -> Int {
+    override func visitAbs(_ ctx: ExpressionParser.AbsContext) -> Double {
         guard let tree = ctx.e(), let value = visit(tree) else {
             return 0
         }
         return abs(value)
     }
-    override func visitParens(_ ctx: ExpressionParser.ParensContext) -> Int {
+    override func visitParens(_ ctx: ExpressionParser.ParensContext) -> Double {
         guard let tree = ctx.e(), let value = visit(tree) else {
             return 0
         }
         return value
     }
-    override func visitInt(_ ctx: ExpressionParser.IntContext) -> Int {
-        return Int(ctx.getText()) ?? 0
+    override func visitFloat(_ ctx: ExpressionParser.FloatContext) -> Double {
+        return Double(ctx.getText()) ?? 0
     }
 }
